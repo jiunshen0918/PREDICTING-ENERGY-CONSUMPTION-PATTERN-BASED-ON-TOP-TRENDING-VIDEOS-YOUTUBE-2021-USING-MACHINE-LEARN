@@ -57,7 +57,7 @@ def show_predict_page():
 
     # Show the learnt model
     h_pred = mylinreg.predict(X)
-    st.markdown(f"""Linear Regression model trained : RMSE:{RMSE(y, h_pred)}""")
+    st.markdown(f"""Linear Regression model trained : RMSE:{RMSE(y, h_pred)}.2f""")
     st.success('Model trained successfully')
 	
     # Visualize the result
