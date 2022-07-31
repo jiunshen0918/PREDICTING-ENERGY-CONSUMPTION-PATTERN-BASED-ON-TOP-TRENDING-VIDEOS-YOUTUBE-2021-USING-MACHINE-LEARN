@@ -54,7 +54,7 @@ def show_predict_page():
     # Visualize the result
     Xtest = np.linspace(0, 15000000, 100).reshape(-1, 1) 
     h_pred = mylinreg.predict(Xtest)
-    fig = plt.figure(figsize=(7, 5))
+    fig = plt.figure(figsize=(8, 6))
     plt.plot (X, y, 'b.', markersize=12,label='samples')
     plt.plot (Xtest, h_pred, 'r-', label = 'model (MyLinearRegression)') 
     plt.xlabel ('TotalEnergy(kJ)', fontsize=18) 
