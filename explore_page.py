@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
+
 
 def show_predict_page():
     st.title("Youtube Energy Estimate Page")
