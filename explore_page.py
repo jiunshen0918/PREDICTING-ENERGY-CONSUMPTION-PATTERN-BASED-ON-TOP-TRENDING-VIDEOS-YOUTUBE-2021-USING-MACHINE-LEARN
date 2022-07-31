@@ -38,7 +38,7 @@ X,y = load_data()
 
 #define calculation
 def calculation(X):
-    y = 0.09*X+47907.63
+    y = 0.09*X+47907
     return y
 
 #define page
@@ -73,5 +73,5 @@ def show_predict_page():
     # Calculation
     pred_view = st.slider('Views', min_value=0, max_value=15000000, value=7500000, step=10000)
     pred_energy = calculation(pred_view)
-    st.markdown(f"""Estimated energy consume is : {pred_energy:.2f}""")
+    st.write("""Estimated energy consume is : pred_energy""")
 show_predict_page()
