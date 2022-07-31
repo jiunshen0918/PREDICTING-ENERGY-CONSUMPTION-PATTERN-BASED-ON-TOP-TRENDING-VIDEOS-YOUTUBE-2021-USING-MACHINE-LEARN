@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 
 def show_predict_page():
