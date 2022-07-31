@@ -17,7 +17,8 @@ def show_explore_page():
     desc = st.button("Show data's description")
     corr = st.button("Show target data's correlationship")
     
-    st.table("q","a","z")
+    a = {"q","a","z"}
+    st.table(a)
     
     if head:
         st.write("""Top 5 records of data is""",youtube.head())
