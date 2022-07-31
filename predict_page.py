@@ -43,14 +43,14 @@ def calculation(X):
 def show_predict_page():
     st.title("Youtube Energy Estimate Page")
 
-    st.write("""### Welcome""")
+    st.write("Welcome")
     
     # Find optimal
     X,y = load_data()
     
     mylinreg = MyLinearRegression()
     mylinreg.fit(X, y)
-    st.write("""Fitted theta:""",mylinreg.theta)
+    st.write("Fitted theta:",mylinreg.theta)
 
     # Show the learnt model
     h_pred = mylinreg.predict(X)
