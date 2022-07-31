@@ -24,7 +24,7 @@ def show_explore_page():
     elif desc:
         st.write("""Data description is""",youtube.describe())
     elif corr:
-        st.write("""Data information is""",corr_matrix['Total_Energy(kJ)'].sort_values(ascending=False))
+        st.write("""Data correlationship is""",corr_matrix['Total_Energy(kJ)'].sort_values(ascending=False))
     
 show_explore_page()
     
