@@ -1,6 +1,0 @@
-#let machine install library
-pandas
-numpy
-sklearn
-matplotlib
-streamlit==1.11.1
