@@ -5,5 +5,5 @@ page = st.sidebar.selectionbox("Explore or Predict", ("Explore","Predict"))
 
 if page == "Explore":
   show_explore_page()
-else
+else:
   show_predict_page()
