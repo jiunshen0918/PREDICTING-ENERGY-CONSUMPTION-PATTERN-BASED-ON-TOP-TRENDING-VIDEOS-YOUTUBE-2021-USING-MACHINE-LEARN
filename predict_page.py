@@ -9,7 +9,7 @@ import numpy as np
 #
 #data = load_model()
 #
-#lin_reg_loaded = data["model"]
+#lin_reg = data["model"]
 #totalenergy = data["totalenergy"]
 #views = data["views"]
 
