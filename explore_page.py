@@ -27,7 +27,7 @@ def show_explore_page():
         buffer = io.StringIO()
         youtube.info(buf=buffer)
         info=buffer.getvalue()
-        st.text("""Data's description is""",info)
+        st.text(info)
     elif desc:
         st.write("""Data's description is""",youtube.describe())
     elif corr:
