@@ -5,5 +5,7 @@ def show_explore_page():
 
     st.write("""### Welcome""")
     
+    head = st.button("Show top 5 records of data:)
+    
 show_explore_page()
     
