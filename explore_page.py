@@ -9,4 +9,4 @@ def show_predict_page():
     
     ok = st.button("Show energy consumption pattern")
     
-show_predict_page():
+show_predict_page()
