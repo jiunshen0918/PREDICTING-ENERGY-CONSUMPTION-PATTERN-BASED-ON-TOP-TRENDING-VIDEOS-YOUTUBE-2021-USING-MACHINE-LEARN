@@ -2,5 +2,5 @@
 pandas
 numpy
 sklearn
-matplotlib.pyplot
+matplotlib
 streamlit==1.11.1
