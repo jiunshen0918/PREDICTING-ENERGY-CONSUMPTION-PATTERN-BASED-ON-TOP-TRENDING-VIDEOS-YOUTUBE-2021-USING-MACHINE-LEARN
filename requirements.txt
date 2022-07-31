@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib.pyplot
+sklearn.model_selection
+sklearn.preprocessing
+sklearn.linear_model
+sklearn.metrics
+sklearn .tree
+sklearn.ensemble
+pickle
+streamlit==1.8.0
