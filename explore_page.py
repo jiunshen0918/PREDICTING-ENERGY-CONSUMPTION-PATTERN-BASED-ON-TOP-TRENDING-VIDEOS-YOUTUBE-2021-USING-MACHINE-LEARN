@@ -74,5 +74,5 @@ def show_predict_page():
     pred_view = st.slider('Views', min_value=0, max_value=15000000, value=7500000, step=10000)
     pred_energy = calculation(pred_view)
     st.write("""Estimated energy consume is :""",pred_energy)
-    st.markdown(f"""Linear Regression model trained : {pred_energy:.0f}""") 
+    st.markdown(f"""Linear Regression model trained : {pred_energy:.1f}""") 
 show_predict_page()
