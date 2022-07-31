@@ -8,10 +8,10 @@ import numpy as np
 #    return data
 #
 #data = load_model()
-
-lin_reg_loaded = data["model"]
-totalenergy = data["totalenergy"]
-views = data["views"]
+#
+#lin_reg_loaded = data["model"]
+#totalenergy = data["totalenergy"]
+#views = data["views"]
 
 def show_predict_page():
     st.title("Youtube Energy Estimate Page")
