@@ -22,9 +22,9 @@ def show_explore_page():
     elif tail:
         st.write("""Last 5 records of data is""",youtube.tail())
     elif info:
-        st.write("""Last 5 records of data is""",youtube.info())
+        st.write("""Data information is""",youtube.info())
     elif desc:
-        st.write("""Last 5 records of data is""",youtube.describe())
+        st.write("""Data description is""",youtube.describe())
     
 show_explore_page()
     
