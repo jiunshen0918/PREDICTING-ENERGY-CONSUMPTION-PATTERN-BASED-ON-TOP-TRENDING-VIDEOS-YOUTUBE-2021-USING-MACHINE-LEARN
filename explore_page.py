@@ -14,18 +14,18 @@ def show_explore_page():
     #buttons
     head = st.button("Show top 5 records of data")
     tail = st.button("Show last 5 records of data")
-    desc = st.button("Show data description")
-    corr = st.button("Show data correlationship")
+    desc = st.button("Show data's description")
+    corr = st.button("Show target data's correlationship")
     
     if head:
         st.write("""Top 5 records of data is""",youtube.head())
     elif tail:
         st.write("""Last 5 records of data is""",youtube.tail())
     elif desc:
-        st.write("""Data description is""",youtube.describe())
+        st.write("""Data's description is""",youtube.describe())
     elif corr:
         corr_matrix=youtube.corr()
-        st.write("""Data correlationship is""",corr_matrix['Total_Energy(kJ)'].sort_values(ascending=False))
+        st.write("""Target data's correlationship is""",corr_matrix['Total_Energy(kJ)'].sort_values(ascending=False))
     
 show_explore_page()
     
