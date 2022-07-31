@@ -43,7 +43,7 @@ def calculation(X):
 def show_predict_page():
     st.title("Youtube Energy Estimate Page")
 
-    st.write("""### Welcome""")
+    st.write("""### Predict the *Data!* :smile:""")
     
     # Find optimal
     X,y = load_data()
