@@ -17,6 +17,8 @@ def show_explore_page():
     
     if head:
         st.write("""Top 5 records of data is""",youtube.head())
+    elif tail:
+        st.write("""Last 5 records of data is""",youtube.tail())
     
 show_explore_page()
     
