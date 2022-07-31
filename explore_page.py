@@ -40,7 +40,7 @@ def load_data():
     return X,y
 
 X,y = load_data()
-
+print(X,y)
 
 #define page
 def show_predict_page():
