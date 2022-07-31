@@ -1,6 +1,5 @@
 pandas
 numpy
 sklearn
-pickle
 matplotlib.pyplot==3.5.2
 streamlit==1.11.1
