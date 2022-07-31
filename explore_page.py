@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import io
 
 #define explore coding
 def show_explore_page():
@@ -14,6 +15,7 @@ def show_explore_page():
     #buttons
     head = st.button("Show top 5 records of data")
     tail = st.button("Show last 5 records of data")
+    info = st.button("Show data's information")
     desc = st.button("Show data's description")
     corr = st.button("Show target data's correlationship")
     
@@ -21,6 +23,10 @@ def show_explore_page():
         st.write("""Top 5 records of data is""",youtube.head())
     elif tail:
         st.write("""Last 5 records of data is""",youtube.tail())
+    elif info:
+        buffer = io.StringIO()
+        youtube.info(buf=buffer)
+        st.write("""Data's description is""",buffer.getvalue())
     elif desc:
         st.write("""Data's description is""",youtube.describe())
     elif corr:
