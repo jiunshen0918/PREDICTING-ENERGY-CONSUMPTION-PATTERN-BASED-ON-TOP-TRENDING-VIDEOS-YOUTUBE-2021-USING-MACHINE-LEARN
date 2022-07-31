@@ -54,11 +54,14 @@ def show_predict_page():
     # Find optimal
     mylinreg = MyLinearRegression()
     mylinreg.fit(X, y)
-    print('Fitted theta:',mylinreg.theta)
 
     # Show the learnt model
     h_pred = mylinreg.predict(X)
-    print('Training error (RMSE):', RMSE(y, h_pred))
+    st.markdown(f"""
+	Linear Regression model trained :
+		RMSE:{RMSE(y, h_pred)}
+	""")
+	st.success('Model trained successfully')
 
     # Visualize the result
     Xtest = np.linspace(0, 15000000, 100).reshape(-1, 1) 
