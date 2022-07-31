@@ -1,11 +1,6 @@
 pandas
 numpy
-sklearn.model_selection==1.1.1
-sklearn.preprocessing
-sklearn.linear_model
-sklearn.metrics
-sklearn.tree
-sklearn.ensemble
+sklearn
 pickle
 matplotlib.pyplot==3.5.2
 streamlit==1.11.1
