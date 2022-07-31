@@ -11,6 +11,7 @@ def show_samples (X, y, axis=[0,15000000,0,1500000]):
     plt.ylabel('$Views$', fontsize=18)
     plt.axis(axis)
     plt.legend(loc='best')
+    st.plotly_chart(fig)
     
 class MyLinearRegression :
 
@@ -40,7 +41,6 @@ def load_data():
     return X,y
 
 X,y = load_data()
-print(X,y)
 
 #define page
 def show_predict_page():
@@ -63,6 +63,6 @@ def show_predict_page():
     show_samples(X, y)
     plt.plot (Xtest, h_pred, 'r-', label = 'model (MyLinearRegression)') 
     plt.legend()
-    plt.show()
+    #plt.show()
     
 show_predict_page()
