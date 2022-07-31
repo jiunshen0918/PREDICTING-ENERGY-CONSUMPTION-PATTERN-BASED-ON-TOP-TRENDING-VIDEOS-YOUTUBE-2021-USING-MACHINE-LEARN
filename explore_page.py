@@ -10,8 +10,8 @@ from sklearn.metrics import mean_squared_error
 def show_samples (X, y, axis=[0,15000000,0,1500000]): 
     fig = plt.figure(figsize=(8, 6))
     plt.plot(X, y, 'b.', markersize=12,label='samples')
-    plt.xlabel ('$TotalEnergy(kJ)$', fontsize=18) 
-    plt.ylabel('$Views$', fontsize=18)
+    plt.xlabel ('TotalEnergy(kJ)', fontsize=18) 
+    plt.ylabel('Views', fontsize=18)
     plt.axis(axis)
     plt.legend(loc='best')
     st.plotly_chart(fig)
@@ -57,8 +57,8 @@ def show_predict_page():
 
     # Show the learnt model
     h_pred = mylinreg.predict(X)
-    st.markdown(f"""Linear Regression model trained : RMSE={RMSE(y, h_pred):.2f}""")
-    st.success('Model trained successfully')
+    st.markdown(f"""Linear Regression model trained : RMSE={RMSE(y, h_pred):.2f}""") #Display string formatted
+    st.success('Model trained successfully') #display success message
 	
     # Visualize the result
     Xtest = np.linspace(0, 15000000, 100).reshape(-1, 1) 
