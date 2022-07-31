@@ -19,4 +19,4 @@ def show_predict_page():
     st.write("""### Welcome""")
     
     ok = st.button("Show energy consumption pattern")
-    if ok:
+
