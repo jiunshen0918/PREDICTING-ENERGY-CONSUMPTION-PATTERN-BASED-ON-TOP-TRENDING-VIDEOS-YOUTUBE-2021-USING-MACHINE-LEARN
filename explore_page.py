@@ -45,6 +45,7 @@ def show_predict_page():
     # Find optimal
     mylinreg = MyLinearRegression()
     mylinreg.fit(X, y)
+    st.write("""Fitted theta:""",mylinreg.theta)
 
     # Show the learnt model
     h_pred = mylinreg.predict(X)
