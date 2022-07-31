@@ -5,7 +5,7 @@ sklearn.model_selection
 sklearn.preprocessing
 sklearn.linear_model
 sklearn.metrics
-sklearn .tree
+sklearn.tree
 sklearn.ensemble
 pickle
 streamlit==1.11.1
