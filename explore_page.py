@@ -6,7 +6,7 @@ import pandas as pd
 def show_explore_page():
     st.title("Youtube Energy Estimate Page")
 
-    st.write("""### Welcome""")
+    st.write("""### Explore the,*Data!* :sunglasses:""")
     
     #load data
     youtube=pd.read_csv("YoutubeDataset.csv")
@@ -14,6 +14,8 @@ def show_explore_page():
     #buttons
     head = st.button("Show top 5 records of data")
     tail = st.button("Show last 5 records of data")
+    info = st.button("Show data information")
+    describe = st.button("Show data description")
     
     if head:
         st.write("""Top 5 records of data is""",youtube.head())
