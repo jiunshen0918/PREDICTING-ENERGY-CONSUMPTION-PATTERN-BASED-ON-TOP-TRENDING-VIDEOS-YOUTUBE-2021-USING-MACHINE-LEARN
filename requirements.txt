@@ -8,4 +8,4 @@ sklearn.metrics
 sklearn .tree
 sklearn.ensemble
 pickle
-streamlit==1.8.0
+streamlit==1.11.1
