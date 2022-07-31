@@ -2,6 +2,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression 
+from sklearn.metrics import mean_squared_error
 
 #define explore coding
 def show_samples (X, y, axis=[0,15000000,0,1500000]): 
