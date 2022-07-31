@@ -48,8 +48,6 @@ def show_predict_page():
 
     # Show the learnt model
     h_pred = mylinreg.predict(X)
-    st.markdown(f"""Linear Regression model trained : RMSE={RMSE(y, h_pred):.2f}""") #Display string formatted
-    st.success('Model trained successfully') #display success message
 	
     # Visualize the result
     Xtest = np.linspace(0, 15000000, 100).reshape(-1, 1) 
@@ -64,4 +62,8 @@ def show_predict_page():
     #plt.show()
     st.plotly_chart(fig)
     
+    # Estimate RMSE
+    st.markdown(f"""Linear Regression model trained : RMSE={RMSE(y, h_pred):.2f}""") #Display string formatted
+    st.success('Model trained successfully') #display success message
+
 show_predict_page()
