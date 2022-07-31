@@ -17,6 +17,8 @@ def show_explore_page():
     desc = st.button("Show data's description")
     corr = st.button("Show target data's correlationship")
     
+    fig=youtube.hist(bins=50,figsize=(20,15))
+    st.plotly_chart(fig)
     if head:
         st.write("""Top 5 records of data is""",youtube.head())
     elif tail:
