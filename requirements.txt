@@ -1,6 +1,6 @@
 pandas
 numpy
-sklearn.model_selection
+sklearn.model_selection==1.1.1
 sklearn.preprocessing
 sklearn.linear_model
 sklearn.metrics
