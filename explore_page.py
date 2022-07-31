@@ -38,7 +38,7 @@ X,y = load_data()
 
 #define calculation
 def calculation(X):
-    y = 100000*X+0.09
+    y = 0.09*X+47907.63
     return y
 
 #define page
