@@ -22,7 +22,7 @@ def show_explore_page():
     elif tail:
         st.write("""Last 5 records of data is""",youtube.tail())
     elif desc:
-        st.write("""Data's description is""",youtube.info())
+        st.info("""Data's description is""",youtube.info())
     elif corr:
         corr_matrix=youtube.corr()
         st.write("""Target data's correlationship is""",corr_matrix['Total_Energy(kJ)'].sort_values(ascending=False))
