@@ -73,5 +73,5 @@ def show_predict_page():
     # Calculation
     pred_view = st.slider('Views', min_value=0, max_value=15000000, value=7500000, step=10000)
     pred_energy = calculation(pred_view)
-    st.write("""Estimated energy consume is :""",pred_energy)
+    st.write("""#Estimated energy consume is :""",pred_energy)
 show_predict_page()
