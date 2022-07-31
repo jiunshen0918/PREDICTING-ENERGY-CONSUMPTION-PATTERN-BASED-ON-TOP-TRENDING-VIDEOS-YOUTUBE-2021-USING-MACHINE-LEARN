@@ -16,4 +16,7 @@ views = data["views"]
 def show_predict_page():
     st.title("Youtube Energy Estimate Page")
 
-    st.write("""### We need some information ah""")
+    st.write("""### Welcome""")
+    
+    ok = st.button("Show energy consumption pattern")
+    if ok:
