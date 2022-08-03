@@ -24,10 +24,10 @@ def show_explore_page():
     elif tail:
         st.write("""Last 5 records of data is""",youtube.tail())
     elif info: 
+        show = pd.DataFrame(youtube)
         buffer = io.StringIO() //to store as memory file-like object
-        youtube.info(buf=buffer) //info is a standard file object
+        show.info(buf=buffer) //info is a standard file object
         st.write("""Data's information is""",buffer.getvalue())
-        st.info(youtube.info)
     elif desc:
         st.write("""Data's description is""",youtube.describe())
     elif corr:
