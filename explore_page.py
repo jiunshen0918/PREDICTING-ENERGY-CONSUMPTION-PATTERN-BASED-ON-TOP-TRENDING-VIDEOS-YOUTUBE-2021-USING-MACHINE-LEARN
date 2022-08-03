@@ -3,6 +3,13 @@ import numpy as np
 import pandas as pd
 import io
 
+# CSS to inject contained in a string
+hide_table_row_index = """
+            <style>
+            thead tr th:first-child {display:none}
+            tbody th {display:none}
+            </style>
+            """
 #define explore coding
 def show_explore_page():
     st.title("Youtube Energy Estimate Page")
@@ -19,8 +26,12 @@ def show_explore_page():
     desc = st.button("Show data's description")
     corr = st.button("Show target data's correlationship")
     
+    # Inject CSS with Markdown
+    st.markdown(hide_table_row_index, unsafe_allow_html=True)
+    
     if head:
-        st.write("""Top 5 records of data is""",youtube.head())
+        st.write("Top 5 records of data is")
+        st.table(youtube.head())
     elif tail:
         st.write("""Last 5 records of data is""",youtube.tail())
     elif info: 
