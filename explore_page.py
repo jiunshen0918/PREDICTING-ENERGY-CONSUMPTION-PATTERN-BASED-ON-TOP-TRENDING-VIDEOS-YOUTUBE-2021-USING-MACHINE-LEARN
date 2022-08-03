@@ -28,7 +28,7 @@ def show_explore_page():
         buffer = io.StringIO() #to store as memory file-like object
         show.info(buf=buffer) #info is a standard file object
         st.write("""Data's information is""",buffer.getvalue())
-        st.info(youtube)
+        st.info(youtube.info)
     elif desc:
         st.write("""Data's description is""",youtube.describe())
     elif corr:
