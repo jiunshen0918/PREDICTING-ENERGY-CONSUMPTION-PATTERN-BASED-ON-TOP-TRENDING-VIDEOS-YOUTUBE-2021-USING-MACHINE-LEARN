@@ -11,6 +11,7 @@ def show_explore_page():
     
     #load data
     youtube=pd.read_csv("YoutubeDataset.csv")
+    youtube.set_index('column', inplace=True)
     
     #buttons
     head = st.button("Show top 5 records of data")
