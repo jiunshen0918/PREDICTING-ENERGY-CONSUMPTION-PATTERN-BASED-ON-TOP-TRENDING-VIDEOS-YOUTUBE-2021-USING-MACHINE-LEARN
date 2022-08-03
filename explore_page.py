@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import io
 
-# CSS to inject contained in a string
+# CSS for table
 hide_table_row_index = """
             <style>
             thead tr th:first-child {display:none}
