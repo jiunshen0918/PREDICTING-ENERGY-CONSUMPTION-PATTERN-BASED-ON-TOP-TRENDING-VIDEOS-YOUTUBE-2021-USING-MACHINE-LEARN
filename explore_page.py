@@ -28,7 +28,7 @@ def show_explore_page():
     corr = st.button("Show target data's correlationship")
     
     # Inject CSS with Markdown
-    st.markdown(hide_table_row_index)
+    st.markdown(hide_table_row_index, unsafe_allow_html=True)
     
     if head:
         st.write("Top 5 records of data is")
