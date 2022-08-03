@@ -4,10 +4,10 @@ import pandas as pd
 import io
 
 # CSS to inject contained in a string
-hide_dataframe_row_index = """
+hide_table_row_index = """
             <style>
-            .row_heading.level0 {display:none}
-            .blank {display:none}
+            thead tr th:first-child {display:none}
+            tbody th {display:none}
             </style>
             """
 
@@ -28,14 +28,14 @@ def show_explore_page():
     corr = st.button("Show target data's correlationship")
     
     # Inject CSS with Markdown
-    st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
+    st.markdown(hide_table_row_index)
     
     if head:
         st.write("Top 5 records of data is")
-        st.dataframe(youtube.head())
+        st.table(youtube.head())
     elif tail:
         st.write("Last 5 records of data is")
-        st.dataframe(youtube.tail())
+        st.table(youtube.tail())
     elif info: 
         buffer = io.StringIO() #to store as memory file-like object
         youtube.info(buf=buffer) #info is a standard file object
