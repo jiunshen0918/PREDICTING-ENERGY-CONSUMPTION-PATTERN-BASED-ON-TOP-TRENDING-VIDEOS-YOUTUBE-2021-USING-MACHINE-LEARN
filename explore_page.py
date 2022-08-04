@@ -18,7 +18,7 @@ def show_explore_page():
 
     st.write("""### Explore the *Data!* :sunglasses:""")
             
-    [theme]
+    
     backgroundColor="#002b36"
             
     #display image
