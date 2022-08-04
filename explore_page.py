@@ -16,10 +16,12 @@ hide_table_row_index = """
 def show_explore_page():
     st.title("Youtube Energy Estimate Page")
 
+    st.write("""### Explore the *Data!* :sunglasses:""")
+            
     #display image
     image = Image.open('Excited_Hedgehog.jpg')
-    new_image = image.resize((200, 300))
-    st.image(new_image, caption='Lets explore the data!')
+    new_image = image.resize((150, 225))
+    st.image(new_image, caption='Lets Go!')
             
     #load data
     youtube=pd.read_csv("YoutubeDataset.csv")
