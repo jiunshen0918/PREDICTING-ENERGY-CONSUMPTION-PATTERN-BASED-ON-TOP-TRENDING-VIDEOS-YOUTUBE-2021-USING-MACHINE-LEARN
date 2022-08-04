@@ -19,7 +19,7 @@ def show_explore_page():
     st.write("""### Explore the *Data!* :sunglasses:""")
 
     #display image
-    image = Image.open(Excited_Hedgehog.jpg)
+    image = Image.open('Excited_Hedgehog'.jpg)
     new_image = image.resize((600, 400))
     st.image(new_image)
             
