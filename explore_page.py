@@ -27,9 +27,7 @@ def show_explore_page():
     youtube=pd.read_csv("YoutubeDataset.csv")
 
     #buttons
-    choice = st.radio(
-         "Which to explore?",
-         ("Top 5 records", "Last 5 records", "Data's information", "Data's description", "Target data's correlationship"))
+    choice = st.radio("Top 5 records", "Last 5 records", "Data's information", "Data's description", "Target data's correlationship")
           
     # Inject CSS with Markdown
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
