@@ -45,8 +45,6 @@ def show_predict_page():
     st.title("Youtube Energy Estimate Page")
 
     st.write("""### Predict the *Data!* :smile:""")
-	
-    st.markdown("![Alt Text](https://media.giphy.com/media/sthmCnCpfr8M8jtTQy/giphy.gif)")
 
     # Load data
     X,y = load_data()
