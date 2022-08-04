@@ -56,6 +56,8 @@ def show_explore_page():
         corr_matrix=youtube.corr()
         st.write("""Target data's correlationship is""",corr_matrix['Total_Energy(kJ)'].sort_values(ascending=False))
     else:
+        X = youtube[['Views']].values
+        y = youtube ['Total_Energy(kJ)'].values
         fig = plt.figure(figsize=(7, 5))
         plt.plot (X, y, 'b.', markersize=12,label='samples')
         plt.xlabel ('TotalEnergy(kJ)', fontsize=18) 
