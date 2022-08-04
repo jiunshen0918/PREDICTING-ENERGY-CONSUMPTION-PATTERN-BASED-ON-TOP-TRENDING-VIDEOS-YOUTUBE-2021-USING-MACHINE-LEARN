@@ -27,7 +27,13 @@ def show_explore_page():
     youtube=pd.read_csv("YoutubeDataset.csv")
 
     #radio
-    choice = st.radio("Select a data explore way!",("Top 5 records", "Last 5 records", "Data's information", "Data's description", "Target data's correlationship"))
+    choice = st.radio("Select a data explore way!",(
+                "Top 5 records", 
+                "Last 5 records", 
+                "Data's information", 
+                "Data's description", 
+                "Target data's correlationship",
+                "Plot Relation graph"))
           
     # Inject CSS with Markdown
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
@@ -44,9 +50,11 @@ def show_explore_page():
         st.write("""Data's information is""",buffer.getvalue())
     elif choice=="Data's description":
         st.write("""Data's description is""",youtube.describe())
-    else:
+    elif choice=="Target data's correlationship":
         corr_matrix=youtube.corr()
         st.write("""Target data's correlationship is""",corr_matrix['Total_Energy(kJ)'].sort_values(ascending=False))
+    else:
+        st.write(youtube.plot(x='Total_Energy(kJ)',y='Views',kind='scatter'))
     
 show_explore_page()
     
