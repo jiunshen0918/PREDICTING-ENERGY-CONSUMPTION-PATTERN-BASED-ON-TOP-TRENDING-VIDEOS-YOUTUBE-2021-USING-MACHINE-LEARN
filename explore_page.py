@@ -56,7 +56,11 @@ def show_explore_page():
         corr_matrix=youtube.corr()
         st.write("""Target data's correlationship is""",corr_matrix['Total_Energy(kJ)'].sort_values(ascending=False))
     else:
-        st.plotly_chart(youtube.plot(x='Total_Energy(kJ)',y='Views',kind='scatter')) #to create unique chart types
+        fig = plt.figure(figsize=(7, 5))
+        plt.plot (X, y, 'b.', markersize=12,label='samples')
+        plt.xlabel ('TotalEnergy(kJ)', fontsize=18) 
+        plt.ylabel('Views', fontsize=18)
+        st.plotly_chart(fig) #to create unique chart types
     
 show_explore_page()
     
