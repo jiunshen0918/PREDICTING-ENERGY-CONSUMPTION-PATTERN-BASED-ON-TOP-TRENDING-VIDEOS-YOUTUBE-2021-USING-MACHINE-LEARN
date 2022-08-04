@@ -3,7 +3,7 @@ from explore_page import show_explore_page
 from predict_page import show_predict_page
 
 def sidebar():
-  st.sidebar.image("bongo-cat.gif", width = 300)
+  st.sidebar.image("bongo-cat.gif")
   page = st.sidebar.selectbox("Explore or Predict", ("Explore","Predict"))
   return page
 
