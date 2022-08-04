@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import base64
 import plotly.figure_factory as ff
 from sklearn.linear_model import LinearRegression 
 from sklearn.metrics import mean_squared_error
@@ -46,17 +45,6 @@ def show_predict_page():
     st.title("Youtube Energy Estimate Page")
 
     st.write("""### Predict the *Data!* :smile:""")
-	
-    # Load gif file
-    file_ = open("bongocat.gif", "rb")
-    contents = file_.read()
-    data_url = base64.b64encode(contents).decode("utf-8")
-    file_.close()
-
-    st.markdown(
-        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
-        unsafe_allow_html=True,
-    )
 
     # Load data
     X,y = load_data()
