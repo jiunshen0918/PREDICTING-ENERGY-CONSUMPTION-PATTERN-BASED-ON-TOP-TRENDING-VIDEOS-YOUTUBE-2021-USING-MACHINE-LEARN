@@ -48,15 +48,10 @@ def show_predict_page():
     st.write("""### Predict the *Data!* :smile:""")
 	
     # Load gif file
-    image = Image.open('bongocat.gif')
+    image = Image.open("bongocat.gif")
     new_image = image.resize((125, 190))
     st.image(new_image, caption='Lets Go!')
 
-    st.markdown(
-        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
-        unsafe_allow_html=True,
-    )
-    
     # Load data
     X,y = load_data()
     
