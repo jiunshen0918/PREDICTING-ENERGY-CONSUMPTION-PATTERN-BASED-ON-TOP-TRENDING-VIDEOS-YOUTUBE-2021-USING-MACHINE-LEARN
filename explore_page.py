@@ -58,7 +58,7 @@ def show_explore_page():
     else:
         X = youtube['Total_Energy(kJ)'].values
         y = youtube['Views'].values
-        fig = plt.figure(figsize=(5, 3))
+        fig = plt.figure(figsize=(5, 5))
         plt.plot (X, y, 'b.', markersize=6,label='samples')
         plt.xlabel ('TotalEnergy(kJ)', fontsize=18) 
         plt.ylabel('Views', fontsize=18)
