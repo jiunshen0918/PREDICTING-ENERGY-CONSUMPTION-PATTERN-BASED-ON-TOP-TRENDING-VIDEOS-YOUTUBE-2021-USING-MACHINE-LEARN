@@ -46,7 +46,7 @@ def show_predict_page():
 
     st.write("""### Predict the *Data!* :smile:""")
 	
-    st.markdown("![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)")
+    st.markdown("![Alt Text](https://tenor.com/view/bongo-cat-gif-12635695)")
 
     # Load data
     X,y = load_data()
