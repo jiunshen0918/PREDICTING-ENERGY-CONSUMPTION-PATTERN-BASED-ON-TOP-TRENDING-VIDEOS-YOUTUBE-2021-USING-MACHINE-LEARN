@@ -18,8 +18,8 @@ def show_explore_page():
 
     #display image
     image = Image.open('Excited_Hedgehog.jpg')
-    new_image = image.resize((100, 150))
-    st.image(new_image, caption='Explore the *Data!* :sunglasses:')
+    new_image = image.resize((200, 300))
+    st.image(new_image, caption='Lets explore the data!')
             
     #load data
     youtube=pd.read_csv("YoutubeDataset.csv")
