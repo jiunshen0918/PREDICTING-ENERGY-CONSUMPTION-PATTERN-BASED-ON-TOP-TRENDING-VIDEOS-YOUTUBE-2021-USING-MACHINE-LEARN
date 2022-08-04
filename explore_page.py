@@ -58,8 +58,8 @@ def show_explore_page():
     else:
         X = youtube['Total_Energy(kJ)'].values
         y = youtube['Views'].values
-        fig = plt.figure(figsize=(7, 5))
-        plt.plot (X, y, 'b.', markersize=12,label='samples')
+        fig = plt.figure(figsize=(3.5, 2))
+        plt.plot (X, y, 'b.', markersize=6,label='samples')
         plt.xlabel ('TotalEnergy(kJ)', fontsize=18) 
         plt.ylabel('Views', fontsize=18)
         st.plotly_chart(fig) #to create unique chart types
