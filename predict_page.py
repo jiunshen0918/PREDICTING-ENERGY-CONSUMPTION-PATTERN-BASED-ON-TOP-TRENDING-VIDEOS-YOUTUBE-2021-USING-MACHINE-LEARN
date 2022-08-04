@@ -75,4 +75,6 @@ def show_predict_page():
     pred_view = st.slider('Enter the numeber of views', min_value=0, max_value=15000000, value=7500000, step=10000)
     pred_energy = calculation(pred_view)
     st.markdown(f"""Estimated energy consume for the total view is : {pred_energy:.0f} kJ""") 
+
+    st.snow()
 show_predict_page()
