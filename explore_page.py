@@ -20,7 +20,7 @@ def show_explore_page():
 
     #display image
     image = Image.open('Excited_Hedgehog.jpg')
-    new_image = image.resize((200, 300))
+    new_image = image.resize((50, 75))
     st.image(new_image)
             
     #load data
