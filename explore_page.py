@@ -19,8 +19,12 @@ def show_explore_page():
     st.write("""### Explore the *Data!* :sunglasses:""")
 
     #display image
-    image = Image.open('Excited_Hedgehog.jpg')
-    st.image(image, caption='Exciting to explore!')
+    image = st.file_uploader('', type='jpg', key=6)
+    if image is not None:
+        image = Image.open(Excited_Hedgehog.jpg)
+        new_image = image.resize((600, 400))
+        st.image(new_image)
+
             
     #load data
     youtube=pd.read_csv("YoutubeDataset.csv")
