@@ -27,28 +27,26 @@ def show_explore_page():
     youtube=pd.read_csv("YoutubeDataset.csv")
 
     #buttons
-    head = st.button("Show top 5 records of data")
-    tail = st.button("Show last 5 records of data")
-    info = st.button("Show data's information")
-    desc = st.button("Show data's description")
-    corr = st.button("Show target data's correlationship")
-    
+    choice = st.radio(
+         "Which to explore?",
+         ("Top 5 records", "Last 5 records", "Data's information", "Data's description", "Target data's correlationship"))
+          
     # Inject CSS with Markdown
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
     
-    if head:
+    if choice=="Top 5 records":
         st.write("Top 5 records of data is")
         st.table(youtube.head())
-    elif tail:
+    elif choice=="Last 5 records":
         st.write("Last 5 records of data is")
         st.table(youtube.tail())
-    elif info: 
+    elif choice=="Data's information": 
         buffer = io.StringIO() #to store as memory file-like object
         youtube.info(buf=buffer) #info is a standard file object
         st.write("""Data's information is""",buffer.getvalue())
-    elif desc:
+    elif choice=="Data's description":
         st.write("""Data's description is""",youtube.describe())
-    elif corr:
+    else:
         corr_matrix=youtube.corr()
         st.write("""Target data's correlationship is""",corr_matrix['Total_Energy(kJ)'].sort_values(ascending=False))
     
