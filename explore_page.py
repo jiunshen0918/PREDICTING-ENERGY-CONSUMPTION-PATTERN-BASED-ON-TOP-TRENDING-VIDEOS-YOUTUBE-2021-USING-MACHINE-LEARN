@@ -3,6 +3,8 @@ import numpy as np
 import pandas as pd
 import io
 from PIL import Image
+import matplotlib.pyplot as plt
+import plotly.figure_factory as ff
 
 # CSS for table
 hide_table_row_index = """
@@ -54,7 +56,7 @@ def show_explore_page():
         corr_matrix=youtube.corr()
         st.write("""Target data's correlationship is""",corr_matrix['Total_Energy(kJ)'].sort_values(ascending=False))
     else:
-        st.map(youtube.plot(x='Total_Energy(kJ)',y='Views',kind='scatter'))
+        st.plotly_chart(youtube.plot(x='Total_Energy(kJ)',y='Views',kind='scatter')) #to create unique chart types
     
 show_explore_page()
     
