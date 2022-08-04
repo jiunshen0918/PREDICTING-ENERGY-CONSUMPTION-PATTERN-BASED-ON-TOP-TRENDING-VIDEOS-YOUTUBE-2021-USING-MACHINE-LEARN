@@ -54,7 +54,7 @@ def show_explore_page():
         corr_matrix=youtube.corr()
         st.write("""Target data's correlationship is""",corr_matrix['Total_Energy(kJ)'].sort_values(ascending=False))
     else:
-        st.write(youtube.plot(x='Total_Energy(kJ)',y='Views',kind='scatter'))
+        st.map(youtube.plot(x='Total_Energy(kJ)',y='Views',kind='scatter'))
     
 show_explore_page()
     
