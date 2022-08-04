@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import io
+from PIL import Image
 
 # CSS for table
 hide_table_row_index = """
@@ -16,10 +17,14 @@ def show_explore_page():
     st.title("Youtube Energy Estimate Page")
 
     st.write("""### Explore the *Data!* :sunglasses:""")
-    
+
+    #display image
+    image = Image.open('Excited_Hedgehog.jpg')
+    st.image(image, caption='Exciting to explore!')
+            
     #load data
     youtube=pd.read_csv("YoutubeDataset.csv")
-    
+
     #buttons
     head = st.button("Show top 5 records of data")
     tail = st.button("Show last 5 records of data")
