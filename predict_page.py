@@ -37,7 +37,7 @@ def load_data():
 #define calculation
 def calculation(X):
     #y=mx+c
-    y = 167058*X+4
+    y = 4*X+167058
     return y
 
 #define page
