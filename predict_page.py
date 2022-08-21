@@ -30,8 +30,8 @@ def RMSE(y_true, y_pred):
 @st.cache #cache the data, no need execute everytime
 def load_data():
     youtube=pd.read_csv("YoutubeDataset.csv")
-    X = youtube[['Views']].values
-    y = youtube ['Total_Energy(kJ)'].values
+    X = youtube[['Total_Energy(kJ)']].values
+    y = youtube ['Views'].values
     return X,y
 
 #define calculation
@@ -59,20 +59,20 @@ def show_predict_page():
     st.success('Model trained successfully') #display success message
 	
     # Visualize the result
-    Xtest = np.linspace(0, 15000000, 100).reshape(-1, 1) 
+    Xtest = np.linspace(0, 1500000, 100).reshape(-1, 1) 
     h_pred = mylinreg.predict(Xtest)
     fig = plt.figure(figsize=(7, 5))
     plt.plot (X, y, 'b.', markersize=12,label='samples')
     plt.plot (Xtest, h_pred, 'r-', label = 'model (MyLinearRegression)') 
     plt.xlabel ('TotalEnergy(kJ)', fontsize=18) 
     plt.ylabel('Views', fontsize=18)
-    plt.axis([0,15000000,0,1500000])
+    plt.axis([0,1500000,0,15000000])
     plt.legend(loc='best')
     #plt.show()
     st.plotly_chart(fig) #to create unique chart types
     
     # Calculation
-    pred_view = st.slider('Enter the numeber of views', min_value=0, max_value=15000000, value=7500000, step=10000)
+    pred_view = st.slider('Enter the numeber of views', min_value=0, max_value=1500000, value=750000, step=1000)
     pred_energy = calculation(pred_view)
     st.markdown(f"""Estimated energy consume for the total view is : {pred_energy:.0f} kJ""") 
 show_predict_page()
