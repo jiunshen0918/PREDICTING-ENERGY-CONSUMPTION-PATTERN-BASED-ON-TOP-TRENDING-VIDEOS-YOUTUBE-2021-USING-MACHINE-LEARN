@@ -66,7 +66,7 @@ def show_predict_page():
     plt.plot (Xtest, h_pred, 'r-', label = 'model (MyLinearRegression)') 
     plt.xlabel ('TotalEnergy(kJ)', fontsize=18) 
     plt.ylabel('Views', fontsize=18)
-    plt.axis([0,1500000,0,15000000])
+    plt.axis([0,1500000,0,10000000])
     plt.legend(loc='best')
     #plt.show()
     st.plotly_chart(fig) #to create unique chart types
