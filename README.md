@@ -12,7 +12,7 @@ Web Page Coding:<br/>
 -> predict_page.py
 
 Web Page Images:<br/>
--> Excited_Hedgehog.jpg
+-> Excited_Hedgehog.jpg <br/>
 -> bongo-cat.gif
 
 requirements.txt:<br/>
